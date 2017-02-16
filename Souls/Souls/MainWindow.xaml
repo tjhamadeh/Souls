@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Souls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="300" Width="450">
     <Grid>
-        
+        <DockPanel HorizontalAlignment="Left" Height="25" LastChildFill="False" VerticalAlignment="Top" Width="517">
+            <Menu x:Name="fileMenu" Height="25" VerticalAlignment="Top" Width="100">
+                <MenuItem x:Name="fileMenuItem" Header="File" Height="25">
+                    <MenuItem x:Name="exitMenuItem" Header="Exit" HorizontalAlignment="Left" Width="140" Click="exitMenuItem_Click"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="soulsList" Content="Dark Souls" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Dark Souls 2" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Dark Souls 3" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Bloodborne" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <Grid HorizontalAlignment="Left" Height="202" Width="140" Margin="10,57,0,0" VerticalAlignment="Top">
+            <TextBox x:Name="strBox" HorizontalAlignment="Left" Height="20" Margin="40,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" TextAlignment="Center" Width="60"/>
+            <Button x:Name="addStrButton" Content="+" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top"  Width="25" Click="addStrButton_Click"/>
+            <Button x:Name="remStrButton" Content="-" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="25" Click="remStrButton_Click"/>
+            <TextBox x:Name="dexBox" HorizontalAlignment="Left" Height="20" Margin="40,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" TextAlignment="Center" Width="60"/>
+            <Button x:Name="addDexButton" Content="+" HorizontalAlignment="Left" Margin="105,35,0,0" VerticalAlignment="Top"  Width="25" Click="addDexButton_Click"/>
+            <Button x:Name="remDexButton" Content="-" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="25" Click="remDexButton_Click"/>
+
+        </Grid>
+
     </Grid>
 </Window>
